@@ -1,5 +1,5 @@
 c:\users\nicho\projects\tpch preprocessor\build\tpch_q3.dir\release\topk.obj
-c:\users\nicho\projects\tpch preprocessor\build\tpch_q3.dir\release\hash_join.obj
+c:\users\nicho\projects\tpch preprocessor\build\tpch_q3.dir\release\aggregation.obj
 c:\users\nicho\projects\tpch preprocessor\build\tpch_q3.dir\release\scan_parquet.obj
 c:\users\nicho\projects\tpch preprocessor\build\tpch_q3.dir\release\main.obj
 c:\users\nicho\projects\tpch preprocessor\build\cmakefiles\generate.stamp
