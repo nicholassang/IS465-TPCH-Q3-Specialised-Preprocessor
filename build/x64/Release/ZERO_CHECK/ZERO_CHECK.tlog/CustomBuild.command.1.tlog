@@ -1,0 +1,10 @@
+^C:\USERS\NICHO\PROJECTS\TPCH PREPROCESSOR\BUILD\CMAKEFILES\1C349D6691D29280294504A19E27D41E\GENERATE.STAMP.RULE
+setlocal
+C:\Users\nicho\miniconda3\envs\myenv\Library\bin\cmake.exe "-SC:/Users/nicho/Projects/tpch preprocessor" "-BC:/Users/nicho/Projects/tpch preprocessor/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/nicho/Projects/tpch preprocessor/build/tpch_q3.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

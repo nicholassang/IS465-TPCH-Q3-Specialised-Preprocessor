@@ -1,0 +1,5 @@
+C:\Users\nicho\Projects\tpch preprocessor\src\main.cpp;C:\Users\nicho\Projects\tpch preprocessor\build\tpch_q3.dir\Release\main.obj
+C:\Users\nicho\Projects\tpch preprocessor\src\scan_parquet.cpp;C:\Users\nicho\Projects\tpch preprocessor\build\tpch_q3.dir\Release\scan_parquet.obj
+C:\Users\nicho\Projects\tpch preprocessor\src\hash_join.cpp;C:\Users\nicho\Projects\tpch preprocessor\build\tpch_q3.dir\Release\hash_join.obj
+C:\Users\nicho\Projects\tpch preprocessor\src\aggregation.cpp;C:\Users\nicho\Projects\tpch preprocessor\build\tpch_q3.dir\Release\aggregation.obj
+C:\Users\nicho\Projects\tpch preprocessor\src\topk.cpp;C:\Users\nicho\Projects\tpch preprocessor\build\tpch_q3.dir\Release\topk.obj
