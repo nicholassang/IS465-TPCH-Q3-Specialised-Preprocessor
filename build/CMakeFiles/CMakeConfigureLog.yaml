@@ -1816,3 +1816,1073 @@ events:
       Microsoft (R) Incremental Linker Version 14.44.35215.0
       Copyright (C) Microsoft Corporation.  All rights reserved.
 ...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.26200 - AMD64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow"
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow\\Library\\mingw-w64\\bin"
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow\\Library\\usr\\bin"
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow\\Library\\bin"
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow\\Scripts"
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow\\bin"
+        - "C:\\Users\\nicho\\miniconda3\\condabin"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\nicho\\AppData\\Local\\nvm"
+        - "C:\\nvm4w\\nodejs"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\nicho\\AppData\\Local\\Muse Hub\\lib"
+        - "."
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Amazon\\AWSCLIV2"
+        - "C:\\Program Files\\k6"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Python\\Python313"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Python\\Python313\\Scripts"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Python\\Launcher"
+        - "C:\\Users\\nicho\\scoop\\shims"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Python\\Python312\\Scripts"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Python\\Python312"
+        - "C:\\Users\\nicho\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\nicho\\AppData\\Local\\nvm"
+        - "C:\\nvm4w\\nodejs"
+        - "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Node.js"
+        - "C:\\Program Files\\PostgreSQL\\17\\bin"
+        - "C:\\Users\\nicho\\Projects\\emsdk"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\msys64\\usr\\bin"
+        - "C:\\vcpkg"
+        - "C:\\Users\\nicho\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Program Files\\apache-maven-3.9.12\\bin"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\nicho\\miniconda3\\Scripts"
+        - "."
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/tpch_q3"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: /DWIN32;/D_WINDOWS
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.14.19+164abd434 for .NET Framework
+      Build started 7/3/2026 2:41:01 pm.
+      
+      Project "C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\4.1.1\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+      VcpkgTripletSelection:
+        Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+        Using normalized configuration "Release"
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\4.1.1\\CompilerIdC\\CompilerIdC.exe
+      AppLocalFromInstalled:
+        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\4.1.1\\CompilerIdC\\CompilerIdC.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+        'pwsh.exe' is not recognized as an internal or external command,
+        operable program or batch file.
+        The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\4.1.1\\CompilerIdC\\CompilerIdC.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"" exited with code 9009.
+        "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\4.1.1\\CompilerIdC\\CompilerIdC.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Done Building Project "C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\4.1.1\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:01.07
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Users/nicho/Projects/tpch preprocessor/build/CMakeFiles/4.1.1/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/mingw-w64/bin/"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/usr/bin/"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/bin/"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Scripts/"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/bin/"
+      - "C:/Users/nicho/miniconda3/condabin/"
+      - "C:/Users/nicho/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/nicho/AppData/Local/nvm/"
+      - "C:/nvm4w/nodejs/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/nicho/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/nicho/Projects/tpch preprocessor/build/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/Amazon/AWSCLIV2/"
+      - "C:/Program Files/k6/"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python313/"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python313/Scripts/"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Launcher/"
+      - "C:/Users/nicho/scoop/shims/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/nicho/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/nicho/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Node.js/"
+      - "C:/Program Files/PostgreSQL/17/bin/"
+      - "C:/Users/nicho/Projects/emsdk/"
+      - "C:/msys64/usr/bin/"
+      - "C:/vcpkg/"
+      - "C:/Program Files/apache-maven-3.9.12/bin/"
+      - "C:/Users/nicho/AppData/Local/Programs/Ollama/"
+      - "C:/Users/nicho/miniconda3/Scripts/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow"
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow\\Library\\mingw-w64\\bin"
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow\\Library\\usr\\bin"
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow\\Library\\bin"
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow\\Scripts"
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow\\bin"
+        - "C:\\Users\\nicho\\miniconda3\\condabin"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\nicho\\AppData\\Local\\nvm"
+        - "C:\\nvm4w\\nodejs"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\nicho\\AppData\\Local\\Muse Hub\\lib"
+        - "."
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Amazon\\AWSCLIV2"
+        - "C:\\Program Files\\k6"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Python\\Python313"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Python\\Python313\\Scripts"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Python\\Launcher"
+        - "C:\\Users\\nicho\\scoop\\shims"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Python\\Python312\\Scripts"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Python\\Python312"
+        - "C:\\Users\\nicho\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\nicho\\AppData\\Local\\nvm"
+        - "C:\\nvm4w\\nodejs"
+        - "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Node.js"
+        - "C:\\Program Files\\PostgreSQL\\17\\bin"
+        - "C:\\Users\\nicho\\Projects\\emsdk"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\msys64\\usr\\bin"
+        - "C:\\vcpkg"
+        - "C:\\Users\\nicho\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Program Files\\apache-maven-3.9.12\\bin"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\nicho\\miniconda3\\Scripts"
+        - "."
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/tpch_q3"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/mingw-w64/bin/"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/usr/bin/"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/bin/"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Scripts/"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/bin/"
+      - "C:/Users/nicho/miniconda3/condabin/"
+      - "C:/Users/nicho/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/nicho/AppData/Local/nvm/"
+      - "C:/nvm4w/nodejs/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/nicho/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/nicho/Projects/tpch preprocessor/build/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/Amazon/AWSCLIV2/"
+      - "C:/Program Files/k6/"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python313/"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python313/Scripts/"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Launcher/"
+      - "C:/Users/nicho/scoop/shims/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/nicho/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/nicho/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Node.js/"
+      - "C:/Program Files/PostgreSQL/17/bin/"
+      - "C:/Users/nicho/Projects/emsdk/"
+      - "C:/msys64/usr/bin/"
+      - "C:/vcpkg/"
+      - "C:/Program Files/apache-maven-3.9.12/bin/"
+      - "C:/Users/nicho/AppData/Local/Programs/Ollama/"
+      - "C:/Users/nicho/miniconda3/Scripts/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/lld-link.com"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/lld-link.exe"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/lld-link"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/mingw-w64/bin/lld-link.com"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/mingw-w64/bin/lld-link.exe"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/mingw-w64/bin/lld-link"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/usr/bin/lld-link.com"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/usr/bin/lld-link.exe"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/usr/bin/lld-link"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/bin/lld-link.com"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/bin/lld-link.exe"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/bin/lld-link"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Scripts/lld-link.com"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Scripts/lld-link.exe"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Scripts/lld-link"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/bin/lld-link.com"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/bin/lld-link.exe"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/bin/lld-link"
+      - "C:/Users/nicho/miniconda3/condabin/lld-link.com"
+      - "C:/Users/nicho/miniconda3/condabin/lld-link.exe"
+      - "C:/Users/nicho/miniconda3/condabin/lld-link"
+      - "C:/Users/nicho/AppData/Local/Programs/Microsoft VS Code/lld-link.com"
+      - "C:/Users/nicho/AppData/Local/Programs/Microsoft VS Code/lld-link.exe"
+      - "C:/Users/nicho/AppData/Local/Programs/Microsoft VS Code/lld-link"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/lld-link.com"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/lld-link.exe"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Program Files/Git/cmd/lld-link.com"
+      - "C:/Program Files/Git/cmd/lld-link.exe"
+      - "C:/Program Files/Git/cmd/lld-link"
+      - "C:/Users/nicho/AppData/Local/nvm/lld-link.com"
+      - "C:/Users/nicho/AppData/Local/nvm/lld-link.exe"
+      - "C:/Users/nicho/AppData/Local/nvm/lld-link"
+      - "C:/nvm4w/nodejs/lld-link.com"
+      - "C:/nvm4w/nodejs/lld-link.exe"
+      - "C:/nvm4w/nodejs/lld-link"
+      - "C:/Program Files/CMake/bin/lld-link.com"
+      - "C:/Program Files/CMake/bin/lld-link.exe"
+      - "C:/Program Files/CMake/bin/lld-link"
+      - "C:/Users/nicho/AppData/Local/Muse Hub/lib/lld-link.com"
+      - "C:/Users/nicho/AppData/Local/Muse Hub/lib/lld-link.exe"
+      - "C:/Users/nicho/AppData/Local/Muse Hub/lib/lld-link"
+      - "C:/Users/nicho/Projects/tpch preprocessor/build/lld-link.com"
+      - "C:/Users/nicho/Projects/tpch preprocessor/build/lld-link.exe"
+      - "C:/Users/nicho/Projects/tpch preprocessor/build/lld-link"
+      - "C:/Program Files/Docker/Docker/resources/bin/lld-link.com"
+      - "C:/Program Files/Docker/Docker/resources/bin/lld-link.exe"
+      - "C:/Program Files/Docker/Docker/resources/bin/lld-link"
+      - "C:/Program Files/Amazon/AWSCLIV2/lld-link.com"
+      - "C:/Program Files/Amazon/AWSCLIV2/lld-link.exe"
+      - "C:/Program Files/Amazon/AWSCLIV2/lld-link"
+      - "C:/Program Files/k6/lld-link.com"
+      - "C:/Program Files/k6/lld-link.exe"
+      - "C:/Program Files/k6/lld-link"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python313/lld-link.com"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python313/lld-link.exe"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python313/lld-link"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python313/Scripts/lld-link.com"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python313/Scripts/lld-link.exe"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python313/Scripts/lld-link"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Launcher/lld-link.com"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Launcher/lld-link.exe"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Launcher/lld-link"
+      - "C:/Users/nicho/scoop/shims/lld-link.com"
+      - "C:/Users/nicho/scoop/shims/lld-link.exe"
+      - "C:/Users/nicho/scoop/shims/lld-link"
+      - "C:/msys64/ucrt64/bin/lld-link.com"
+      - "C:/msys64/ucrt64/bin/lld-link.exe"
+      - "C:/msys64/ucrt64/bin/lld-link"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python312/Scripts/lld-link.com"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python312/Scripts/lld-link.exe"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python312/Scripts/lld-link"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python312/lld-link.com"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python312/lld-link.exe"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python312/lld-link"
+      - "C:/Users/nicho/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/nicho/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/nicho/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Users/nicho/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.com"
+      - "C:/Users/nicho/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.exe"
+      - "C:/Users/nicho/AppData/Local/Programs/Microsoft VS Code/bin/lld-link"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Node.js/lld-link.com"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Node.js/lld-link.exe"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Node.js/lld-link"
+      - "C:/Program Files/PostgreSQL/17/bin/lld-link.com"
+      - "C:/Program Files/PostgreSQL/17/bin/lld-link.exe"
+      - "C:/Program Files/PostgreSQL/17/bin/lld-link"
+      - "C:/Users/nicho/Projects/emsdk/lld-link.com"
+      - "C:/Users/nicho/Projects/emsdk/lld-link.exe"
+      - "C:/Users/nicho/Projects/emsdk/lld-link"
+      - "C:/msys64/usr/bin/lld-link.com"
+      - "C:/msys64/usr/bin/lld-link.exe"
+      - "C:/msys64/usr/bin/lld-link"
+      - "C:/vcpkg/lld-link.com"
+      - "C:/vcpkg/lld-link.exe"
+      - "C:/vcpkg/lld-link"
+      - "C:/Program Files/apache-maven-3.9.12/bin/lld-link.com"
+      - "C:/Program Files/apache-maven-3.9.12/bin/lld-link.exe"
+      - "C:/Program Files/apache-maven-3.9.12/bin/lld-link"
+      - "C:/Users/nicho/AppData/Local/Programs/Ollama/lld-link.com"
+      - "C:/Users/nicho/AppData/Local/Programs/Ollama/lld-link.exe"
+      - "C:/Users/nicho/AppData/Local/Programs/Ollama/lld-link"
+      - "C:/Users/nicho/miniconda3/Scripts/lld-link.com"
+      - "C:/Users/nicho/miniconda3/Scripts/lld-link.exe"
+      - "C:/Users/nicho/miniconda3/Scripts/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow"
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow\\Library\\mingw-w64\\bin"
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow\\Library\\usr\\bin"
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow\\Library\\bin"
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow\\Scripts"
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow\\bin"
+        - "C:\\Users\\nicho\\miniconda3\\condabin"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\nicho\\AppData\\Local\\nvm"
+        - "C:\\nvm4w\\nodejs"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\nicho\\AppData\\Local\\Muse Hub\\lib"
+        - "."
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Amazon\\AWSCLIV2"
+        - "C:\\Program Files\\k6"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Python\\Python313"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Python\\Python313\\Scripts"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Python\\Launcher"
+        - "C:\\Users\\nicho\\scoop\\shims"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Python\\Python312\\Scripts"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Python\\Python312"
+        - "C:\\Users\\nicho\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\nicho\\AppData\\Local\\nvm"
+        - "C:\\nvm4w\\nodejs"
+        - "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Node.js"
+        - "C:\\Program Files\\PostgreSQL\\17\\bin"
+        - "C:\\Users\\nicho\\Projects\\emsdk"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\msys64\\usr\\bin"
+        - "C:\\vcpkg"
+        - "C:\\Users\\nicho\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Program Files\\apache-maven-3.9.12\\bin"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\nicho\\miniconda3\\Scripts"
+        - "."
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/tpch_q3"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow"
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow\\Library\\mingw-w64\\bin"
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow\\Library\\usr\\bin"
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow\\Library\\bin"
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow\\Scripts"
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow\\bin"
+        - "C:\\Users\\nicho\\miniconda3\\condabin"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\nicho\\AppData\\Local\\nvm"
+        - "C:\\nvm4w\\nodejs"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\nicho\\AppData\\Local\\Muse Hub\\lib"
+        - "."
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Amazon\\AWSCLIV2"
+        - "C:\\Program Files\\k6"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Python\\Python313"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Python\\Python313\\Scripts"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Python\\Launcher"
+        - "C:\\Users\\nicho\\scoop\\shims"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Python\\Python312\\Scripts"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Python\\Python312"
+        - "C:\\Users\\nicho\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\nicho\\AppData\\Local\\nvm"
+        - "C:\\nvm4w\\nodejs"
+        - "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Node.js"
+        - "C:\\Program Files\\PostgreSQL\\17\\bin"
+        - "C:\\Users\\nicho\\Projects\\emsdk"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\msys64\\usr\\bin"
+        - "C:\\vcpkg"
+        - "C:\\Users\\nicho\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Program Files\\apache-maven-3.9.12\\bin"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\nicho\\miniconda3\\Scripts"
+        - "."
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/tpch_q3"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: /DWIN32;/D_WINDOWS;/EHsc
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.14.19+164abd434 for .NET Framework
+      Build started 7/3/2026 2:41:02 pm.
+      
+      Project "C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\4.1.1\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      VcpkgTripletSelection:
+        Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+        Using normalized configuration "Release"
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\4.1.1\\CompilerIdCXX\\CompilerIdCXX.exe
+      AppLocalFromInstalled:
+        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\4.1.1\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+        'pwsh.exe' is not recognized as an internal or external command,
+        operable program or batch file.
+        The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\4.1.1\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"" exited with code 9009.
+        "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\4.1.1\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\4.1.1\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.96
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/nicho/Projects/tpch preprocessor/build/CMakeFiles/4.1.1/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/mingw-w64/bin/"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/usr/bin/"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/bin/"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Scripts/"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/bin/"
+      - "C:/Users/nicho/miniconda3/condabin/"
+      - "C:/Users/nicho/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/nicho/AppData/Local/nvm/"
+      - "C:/nvm4w/nodejs/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/nicho/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/nicho/Projects/tpch preprocessor/build/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/Amazon/AWSCLIV2/"
+      - "C:/Program Files/k6/"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python313/"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python313/Scripts/"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Launcher/"
+      - "C:/Users/nicho/scoop/shims/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/nicho/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/nicho/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Node.js/"
+      - "C:/Program Files/PostgreSQL/17/bin/"
+      - "C:/Users/nicho/Projects/emsdk/"
+      - "C:/msys64/usr/bin/"
+      - "C:/vcpkg/"
+      - "C:/Program Files/apache-maven-3.9.12/bin/"
+      - "C:/Users/nicho/AppData/Local/Programs/Ollama/"
+      - "C:/Users/nicho/miniconda3/Scripts/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/lld-link.com"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/lld-link.exe"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/lld-link"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/mingw-w64/bin/lld-link.com"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/mingw-w64/bin/lld-link.exe"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/mingw-w64/bin/lld-link"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/usr/bin/lld-link.com"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/usr/bin/lld-link.exe"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/usr/bin/lld-link"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/bin/lld-link.com"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/bin/lld-link.exe"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Library/bin/lld-link"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Scripts/lld-link.com"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Scripts/lld-link.exe"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/Scripts/lld-link"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/bin/lld-link.com"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/bin/lld-link.exe"
+      - "C:/Users/nicho/miniconda3/envs/tpch_pyarrow/bin/lld-link"
+      - "C:/Users/nicho/miniconda3/condabin/lld-link.com"
+      - "C:/Users/nicho/miniconda3/condabin/lld-link.exe"
+      - "C:/Users/nicho/miniconda3/condabin/lld-link"
+      - "C:/Users/nicho/AppData/Local/Programs/Microsoft VS Code/lld-link.com"
+      - "C:/Users/nicho/AppData/Local/Programs/Microsoft VS Code/lld-link.exe"
+      - "C:/Users/nicho/AppData/Local/Programs/Microsoft VS Code/lld-link"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/lld-link.com"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/lld-link.exe"
+      - "C:/Program Files/Eclipse Adoptium/jdk-21.0.8.9-hotspot/bin/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Program Files/Git/cmd/lld-link.com"
+      - "C:/Program Files/Git/cmd/lld-link.exe"
+      - "C:/Program Files/Git/cmd/lld-link"
+      - "C:/Users/nicho/AppData/Local/nvm/lld-link.com"
+      - "C:/Users/nicho/AppData/Local/nvm/lld-link.exe"
+      - "C:/Users/nicho/AppData/Local/nvm/lld-link"
+      - "C:/nvm4w/nodejs/lld-link.com"
+      - "C:/nvm4w/nodejs/lld-link.exe"
+      - "C:/nvm4w/nodejs/lld-link"
+      - "C:/Program Files/CMake/bin/lld-link.com"
+      - "C:/Program Files/CMake/bin/lld-link.exe"
+      - "C:/Program Files/CMake/bin/lld-link"
+      - "C:/Users/nicho/AppData/Local/Muse Hub/lib/lld-link.com"
+      - "C:/Users/nicho/AppData/Local/Muse Hub/lib/lld-link.exe"
+      - "C:/Users/nicho/AppData/Local/Muse Hub/lib/lld-link"
+      - "C:/Users/nicho/Projects/tpch preprocessor/build/lld-link.com"
+      - "C:/Users/nicho/Projects/tpch preprocessor/build/lld-link.exe"
+      - "C:/Users/nicho/Projects/tpch preprocessor/build/lld-link"
+      - "C:/Program Files/Docker/Docker/resources/bin/lld-link.com"
+      - "C:/Program Files/Docker/Docker/resources/bin/lld-link.exe"
+      - "C:/Program Files/Docker/Docker/resources/bin/lld-link"
+      - "C:/Program Files/Amazon/AWSCLIV2/lld-link.com"
+      - "C:/Program Files/Amazon/AWSCLIV2/lld-link.exe"
+      - "C:/Program Files/Amazon/AWSCLIV2/lld-link"
+      - "C:/Program Files/k6/lld-link.com"
+      - "C:/Program Files/k6/lld-link.exe"
+      - "C:/Program Files/k6/lld-link"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python313/lld-link.com"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python313/lld-link.exe"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python313/lld-link"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python313/Scripts/lld-link.com"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python313/Scripts/lld-link.exe"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python313/Scripts/lld-link"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Launcher/lld-link.com"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Launcher/lld-link.exe"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Launcher/lld-link"
+      - "C:/Users/nicho/scoop/shims/lld-link.com"
+      - "C:/Users/nicho/scoop/shims/lld-link.exe"
+      - "C:/Users/nicho/scoop/shims/lld-link"
+      - "C:/msys64/ucrt64/bin/lld-link.com"
+      - "C:/msys64/ucrt64/bin/lld-link.exe"
+      - "C:/msys64/ucrt64/bin/lld-link"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python312/Scripts/lld-link.com"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python312/Scripts/lld-link.exe"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python312/Scripts/lld-link"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python312/lld-link.com"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python312/lld-link.exe"
+      - "C:/Users/nicho/AppData/Local/Programs/Python/Python312/lld-link"
+      - "C:/Users/nicho/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/nicho/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/nicho/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Users/nicho/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.com"
+      - "C:/Users/nicho/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.exe"
+      - "C:/Users/nicho/AppData/Local/Programs/Microsoft VS Code/bin/lld-link"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Node.js/lld-link.com"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Node.js/lld-link.exe"
+      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Node.js/lld-link"
+      - "C:/Program Files/PostgreSQL/17/bin/lld-link.com"
+      - "C:/Program Files/PostgreSQL/17/bin/lld-link.exe"
+      - "C:/Program Files/PostgreSQL/17/bin/lld-link"
+      - "C:/Users/nicho/Projects/emsdk/lld-link.com"
+      - "C:/Users/nicho/Projects/emsdk/lld-link.exe"
+      - "C:/Users/nicho/Projects/emsdk/lld-link"
+      - "C:/msys64/usr/bin/lld-link.com"
+      - "C:/msys64/usr/bin/lld-link.exe"
+      - "C:/msys64/usr/bin/lld-link"
+      - "C:/vcpkg/lld-link.com"
+      - "C:/vcpkg/lld-link.exe"
+      - "C:/vcpkg/lld-link"
+      - "C:/Program Files/apache-maven-3.9.12/bin/lld-link.com"
+      - "C:/Program Files/apache-maven-3.9.12/bin/lld-link.exe"
+      - "C:/Program Files/apache-maven-3.9.12/bin/lld-link"
+      - "C:/Users/nicho/AppData/Local/Programs/Ollama/lld-link.com"
+      - "C:/Users/nicho/AppData/Local/Programs/Ollama/lld-link.exe"
+      - "C:/Users/nicho/AppData/Local/Programs/Ollama/lld-link"
+      - "C:/Users/nicho/miniconda3/Scripts/lld-link.com"
+      - "C:/Users/nicho/miniconda3/Scripts/lld-link.exe"
+      - "C:/Users/nicho/miniconda3/Scripts/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow"
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow\\Library\\mingw-w64\\bin"
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow\\Library\\usr\\bin"
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow\\Library\\bin"
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow\\Scripts"
+        - "C:\\Users\\nicho\\miniconda3\\envs\\tpch_pyarrow\\bin"
+        - "C:\\Users\\nicho\\miniconda3\\condabin"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\nicho\\AppData\\Local\\nvm"
+        - "C:\\nvm4w\\nodejs"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\nicho\\AppData\\Local\\Muse Hub\\lib"
+        - "."
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Amazon\\AWSCLIV2"
+        - "C:\\Program Files\\k6"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Python\\Python313"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Python\\Python313\\Scripts"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Python\\Launcher"
+        - "C:\\Users\\nicho\\scoop\\shims"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Python\\Python312\\Scripts"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Python\\Python312"
+        - "C:\\Users\\nicho\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\nicho\\AppData\\Local\\nvm"
+        - "C:\\nvm4w\\nodejs"
+        - "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Node.js"
+        - "C:\\Program Files\\PostgreSQL\\17\\bin"
+        - "C:\\Users\\nicho\\Projects\\emsdk"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\msys64\\usr\\bin"
+        - "C:\\vcpkg"
+        - "C:\\Users\\nicho\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Program Files\\apache-maven-3.9.12\\bin"
+        - "C:\\Users\\nicho\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\nicho\\miniconda3\\Scripts"
+        - "."
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/tpch_q3"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/nicho/Projects/tpch preprocessor/build/CMakeFiles/CMakeScratch/TryCompile-skkli6"
+      binary: "C:/Users/nicho/Projects/tpch preprocessor/build/CMakeFiles/CMakeScratch/TryCompile-skkli6"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/nicho/Projects/tpch preprocessor/build/CMakeFiles/CMakeScratch/TryCompile-skkli6'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_8f39f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.19+164abd434 for .NET Framework
+        Build started 7/3/2026 2:41:04 pm.
+        
+        Project "C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\CMakeScratch\\TryCompile-skkli6\\cmTC_8f39f.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_8f39f.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\CMakeScratch\\TryCompile-skkli6\\Debug\\".
+          Creating directory "cmTC_8f39f.dir\\Debug\\cmTC_8f39f.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_8f39f.dir\\Debug\\cmTC_8f39f.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_8f39f.dir\\Debug\\cmTC_8f39f.tlog\\unsuccessfulbuild".
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Debug"
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_8f39f.dir\\Debug\\\\" /Fd"cmTC_8f39f.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35215 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_8f39f.dir\\Debug\\\\" /Fd"cmTC_8f39f.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\CMakeScratch\\TryCompile-skkli6\\Debug\\cmTC_8f39f.exe" /INCREMENTAL /ILK:"cmTC_8f39f.dir\\Debug\\cmTC_8f39f.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/nicho/Projects/tpch preprocessor/build/CMakeFiles/CMakeScratch/TryCompile-skkli6/Debug/cmTC_8f39f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/nicho/Projects/tpch preprocessor/build/CMakeFiles/CMakeScratch/TryCompile-skkli6/Debug/cmTC_8f39f.lib" /MACHINE:X64  /machine:x64 cmTC_8f39f.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_8f39f.vcxproj -> C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\CMakeScratch\\TryCompile-skkli6\\Debug\\cmTC_8f39f.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\CMakeScratch\\TryCompile-skkli6\\Debug\\cmTC_8f39f.exe" "C:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_8f39f.dir\\Debug\\cmTC_8f39f.tlog\\cmTC_8f39f.write.1u.tlog" "cmTC_8f39f.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' is not recognized as an internal or external command,
+          operable program or batch file.
+          The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\CMakeScratch\\TryCompile-skkli6\\Debug\\cmTC_8f39f.exe" "C:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_8f39f.dir\\Debug\\cmTC_8f39f.tlog\\cmTC_8f39f.write.1u.tlog" "cmTC_8f39f.dir\\Debug\\vcpkg.applocal.log"" exited with code 9009.
+          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\CMakeScratch\\TryCompile-skkli6\\Debug\\cmTC_8f39f.exe" "C:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_8f39f.dir\\Debug\\cmTC_8f39f.tlog\\cmTC_8f39f.write.1u.tlog" "cmTC_8f39f.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          Deleting file "cmTC_8f39f.dir\\Debug\\cmTC_8f39f.tlog\\unsuccessfulbuild".
+          Touching "cmTC_8f39f.dir\\Debug\\cmTC_8f39f.tlog\\cmTC_8f39f.lastbuildstate".
+        Done Building Project "C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\CMakeScratch\\TryCompile-skkli6\\cmTC_8f39f.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.92
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the C compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.44.35215.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/nicho/Projects/tpch preprocessor/build/CMakeFiles/CMakeScratch/TryCompile-cb7rzt"
+      binary: "C:/Users/nicho/Projects/tpch preprocessor/build/CMakeFiles/CMakeScratch/TryCompile-cb7rzt"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/nicho/Projects/tpch preprocessor/build/CMakeFiles/CMakeScratch/TryCompile-cb7rzt'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_fe9fc.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.19+164abd434 for .NET Framework
+        Build started 7/3/2026 2:41:05 pm.
+        
+        Project "C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cb7rzt\\cmTC_fe9fc.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_fe9fc.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cb7rzt\\Debug\\".
+          Creating directory "cmTC_fe9fc.dir\\Debug\\cmTC_fe9fc.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_fe9fc.dir\\Debug\\cmTC_fe9fc.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_fe9fc.dir\\Debug\\cmTC_fe9fc.tlog\\unsuccessfulbuild".
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Debug"
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Fo"cmTC_fe9fc.dir\\Debug\\\\" /Fd"cmTC_fe9fc.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35215 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Fo"cmTC_fe9fc.dir\\Debug\\\\" /Fd"cmTC_fe9fc.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cb7rzt\\Debug\\cmTC_fe9fc.exe" /INCREMENTAL /ILK:"cmTC_fe9fc.dir\\Debug\\cmTC_fe9fc.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/nicho/Projects/tpch preprocessor/build/CMakeFiles/CMakeScratch/TryCompile-cb7rzt/Debug/cmTC_fe9fc.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/nicho/Projects/tpch preprocessor/build/CMakeFiles/CMakeScratch/TryCompile-cb7rzt/Debug/cmTC_fe9fc.lib" /MACHINE:X64  /machine:x64 cmTC_fe9fc.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_fe9fc.vcxproj -> C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cb7rzt\\Debug\\cmTC_fe9fc.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cb7rzt\\Debug\\cmTC_fe9fc.exe" "C:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_fe9fc.dir\\Debug\\cmTC_fe9fc.tlog\\cmTC_fe9fc.write.1u.tlog" "cmTC_fe9fc.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' is not recognized as an internal or external command,
+          operable program or batch file.
+          The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cb7rzt\\Debug\\cmTC_fe9fc.exe" "C:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_fe9fc.dir\\Debug\\cmTC_fe9fc.tlog\\cmTC_fe9fc.write.1u.tlog" "cmTC_fe9fc.dir\\Debug\\vcpkg.applocal.log"" exited with code 9009.
+          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cb7rzt\\Debug\\cmTC_fe9fc.exe" "C:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_fe9fc.dir\\Debug\\cmTC_fe9fc.tlog\\cmTC_fe9fc.write.1u.tlog" "cmTC_fe9fc.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          Deleting file "cmTC_fe9fc.dir\\Debug\\cmTC_fe9fc.tlog\\unsuccessfulbuild".
+          Touching "cmTC_fe9fc.dir\\Debug\\cmTC_fe9fc.tlog\\cmTC_fe9fc.lastbuildstate".
+        Done Building Project "C:\\Users\\nicho\\Projects\\tpch preprocessor\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cb7rzt\\cmTC_fe9fc.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.93
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.44.35215.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+...
