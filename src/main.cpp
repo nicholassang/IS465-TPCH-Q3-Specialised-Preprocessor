@@ -7,80 +7,59 @@
 #include "types.h"
 
 int main(int argc, char** argv) {
+    std::cout << "START" << std::endl;
     if (argc < 4) {
-        std::cerr << "Usage: " << argv[0] << " customer.parquet orders.parquet lineitem.parquet\n";
+        std::cerr << "Usage: " << argv[0] << " customer.parquet orders.parquet lineitem.parquet" << std::endl;
         return 1;
     }
-    std::cout << "START\n";
+
+    std::cout << "START" << std::endl;
 
     // Read Parquet files
     auto customer = read_parquet(argv[1], {0,1}); // c_custkey, c_mktsegment
     auto orders   = read_parquet(argv[2], {0,1,2,3}); // o_orderkey,o_custkey,o_orderdate,o_shippriority
     auto lineitem = read_parquet(argv[3], {0,1,2,3}); // l_orderkey,l_extendedprice,l_discount,l_shipdate
 
-    std::cout << "[DEBUG] Testing columns " << std:endl;
+    std::cout << "[LOG] Done Reading Parquet " << std::endl;
 
-    std::cout << "[DEBUG] First 10 lineitem orderkeys: ";
-    for(int i=0;i<10;i++) std::cout<<lineitem.int64_cols[0][i]<<" ";
-    std::cout<<std::endl;
-
-    std::cout << "[DEBUG] First 10 orders orderkeys: ";
-    for(int i=0;i<10;i++) std::cout<<orders.int64_cols[0][i]<<" ";
-    std::cout<<std::endl;
-
-    // Filter customers
+    // Filter customers first
     std::unordered_set<int64_t> valid_customers;
     filter_customers(customer, valid_customers);
 
-    std::cout << "[LOG] Valid customers count: " << valid_customers.size() << "\n";
+    std::cout << "[LOG] Valid customers count: " << valid_customers.size() << std::endl;
 
-    // Debug: show first 10 valid customers
-    int count = 0;
-    std::cout << "[DEBUG] Sample valid customers: ";
-    for (auto v : valid_customers) {
-        std::cout << v << " ";
-        if (++count >= 10) break;
-    }
-    std::cout << "\n";
-
-    // Build orders hash table
+    // Build orders hash table only for valid customers
     std::unordered_map<int64_t, OrderInfo> orders_ht;
     build_orders_hash(orders, valid_customers, orders_ht);
+
     std::cout << "[LOG] Orders inserted into hash table: " << orders_ht.size()
-              << " / " << orders.int64_cols[0].size() << "\n";
+              << " / " << orders.int64_cols[0].size() << std::endl;
 
-    // Debug: check first few orders
-    count = 0;
-    std::cout << "[DEBUG] Sample orders hash keys: ";
-    for (auto& [k, v] : orders_ht) {
-        std::cout << k << " ";
-        if (++count >= 10) break;
-    }
-    std::cout << "\n";
-
-    // Aggregate lineitems
+    // Aggregate lineitems for orders in hash table
     std::unordered_map<int64_t, AggResult> agg;
     try {
         aggregate_lineitem(lineitem, orders_ht, agg);
     } catch (const std::exception &e) {
-        std::cerr << "ERROR: " << e.what() << "\n";
+        std::cerr << "[ERROR] " << e.what() << std::endl;
     }
-
-    std::cout << "RESULTS\n";
 
     // Collect results
     auto results = collect_results(agg);
+
+    if (results.empty()) {
+        std::cout << "[WARN] No lineitems matched filtered orders!" << std::endl;
+    }
+
+    // Select top 10 results
     auto top10 = topk(results, 10);
 
-    // Print CSV header
-    std::cout << "l_orderkey,revenue,o_orderdate,o_shippriority\n";
-
-    // Print top 10 rows
+    // Output CSV
+    std::cout << "l_orderkey,revenue,o_orderdate,o_shippriority" << std::endl;
     for (auto& r : top10) {
-        std::cout << r.orderkey << "," 
-                  << r.revenue << "," 
-                  << r.orderdate << "," 
-                  << r.shippriority << "\n";
+        std::cout << r.orderkey << ","
+                  << r.revenue << ","
+                  << r.orderdate << ","
+                  << r.shippriority << std::endl;
     }
 
     std::cout << std::flush;

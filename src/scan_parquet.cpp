@@ -1,120 +1,183 @@
 #include "scan_parquet.h"
+
 #include <iostream>
-#include <stdexcept>
-#include <cmath>
+#include <vector>
+#include <string>
 
-ParquetTable read_parquet(const std::string& filename, const std::vector<int>& column_indices) {
-    std::cout << "[INFO] Opening Parquet file: " << filename << std::endl;
+#include <parquet/api/reader.h>
+#include <parquet/api/schema.h>
 
-    std::unique_ptr<parquet::ParquetFileReader> reader =
-        parquet::ParquetFileReader::OpenFile(filename, false);
-
-    auto file_metadata = reader->metadata();
-    int num_columns = file_metadata->num_columns();
-    int64_t num_rows = file_metadata->num_rows();
-
-    int num_row_groups = file_metadata->num_row_groups();
-    std::cout << "[INFO] Num row groups: " << num_row_groups << std::endl;
-
+ParquetTable read_parquet(const std::string& filename,
+                          const std::vector<int>& col_indices)
+{
     ParquetTable table;
-    table.num_rows = num_rows;
-    table.num_cols = num_columns;
 
-    std::vector<int> cols = column_indices;
-    if (cols.empty()) {
-        for (int c = 0; c < num_columns; c++) cols.push_back(c);
+    std::cout << "[INFO] Reading parquet file: " << filename << std::endl;
+
+    std::shared_ptr<parquet::ParquetFileReader> reader;
+    try {
+        reader = parquet::ParquetFileReader::OpenFile(filename, false);
+    } catch (const std::exception &e) {
+        std::cerr << "[ERROR] Failed to open Parquet file '" << filename << "': "
+                  << e.what() << std::endl;
+        return table;
     }
 
-    for (int col_index : cols) {
-        parquet::Type::type t = file_metadata->schema()->Column(col_index)->physical_type();
-        std::cout << "[INFO] Reading column " << col_index
-                  << " type=" << t
-                  << ", expecting " << num_rows << " rows" << std::endl;
+    if (!reader) {
+        std::cerr << "[ERROR] reader returned null for file " << filename << std::endl;
+        return table;
+    }
 
-        if (t == parquet::Type::INT32) {
-            std::vector<int32_t> data;
-            data.reserve(num_rows);
-            for (int rg = 0; rg < num_row_groups; rg++) {
-                auto reader_rg = reader->RowGroup(rg)->Column(col_index);
-                auto int_reader = static_cast<parquet::Int32Reader*>(reader_rg.get());
-                int16_t def_level;
-                int32_t value;
-                while (int_reader->HasNext()) {
-                    int64_t values_read = 0;
-                    int_reader->ReadBatch(1, &def_level, nullptr, &value, &values_read);
-                    if (values_read > 0) data.push_back(value);
+    auto metadata = reader->metadata();
+    if (!metadata) {
+        std::cerr << "[ERROR] Unable to read metadata from " << filename << std::endl;
+        return table;
+    }
+
+    int num_row_groups = metadata->num_row_groups();
+    std::cout << "[DEBUG] Row groups: " << num_row_groups << std::endl;
+
+    for (int col_index : col_indices)
+    {
+        auto physical_type =
+            metadata->schema()->Column(col_index)->physical_type();
+
+        if (physical_type == parquet::Type::INT64)
+        {
+            std::vector<int64_t> vec;
+
+            for (int rg = 0; rg < num_row_groups; rg++)
+            {
+                auto row_group = reader->RowGroup(rg);
+                auto column_reader = row_group->Column(col_index);
+
+                auto int_reader =
+                    static_cast<parquet::Int64Reader*>(column_reader.get());
+
+                while (int_reader->HasNext())
+                {
+                    int64_t value;
+                    int16_t def, rep;
+                    int64_t read;
+
+                    int_reader->ReadBatch(1, &def, &rep, &value, &read);
+
+                    if (read > 0)
+                        vec.push_back(value);
                 }
             }
-            std::cout << "[INFO] First 5 int32 values: ";
-            for (size_t i = 0; i < std::min<size_t>(5, data.size()); i++) std::cout << data[i] << " ";
-            std::cout << std::endl;
-            table.int32_cols.push_back(std::move(data));
+
+            table.int64_cols.push_back(vec);
         }
-        else if (t == parquet::Type::INT64) {
-            std::vector<int64_t> data;
-            data.reserve(num_rows);
-            for (int rg = 0; rg < num_row_groups; rg++) {
-                auto reader_rg = reader->RowGroup(rg)->Column(col_index);
-                auto int_reader = static_cast<parquet::Int64Reader*>(reader_rg.get());
-                int16_t def_level;
-                int64_t value;
-                while (int_reader->HasNext()) {
-                    int64_t values_read = 0;
-                    int_reader->ReadBatch(1, &def_level, nullptr, &value, &values_read);
-                    if (values_read > 0) data.push_back(value);
+
+        else if (physical_type == parquet::Type::INT32)
+        {
+            std::vector<int32_t> vec;
+
+            for (int rg = 0; rg < num_row_groups; rg++)
+            {
+                auto row_group = reader->RowGroup(rg);
+                auto column_reader = row_group->Column(col_index);
+
+                auto int_reader =
+                    static_cast<parquet::Int32Reader*>(column_reader.get());
+
+                while (int_reader->HasNext())
+                {
+                    int32_t value;
+                    int16_t def, rep;
+                    int64_t read;
+
+                    int_reader->ReadBatch(1, &def, &rep, &value, &read);
+
+                    if (read > 0)
+                        vec.push_back(value);
                 }
             }
-            std::cout << "[INFO] First 5 int64 values: ";
-            for (size_t i = 0; i < std::min<size_t>(5, data.size()); i++) std::cout << data[i] << " ";
-            std::cout << std::endl;
-            table.int64_cols.push_back(std::move(data));
+
+            table.int32_cols.push_back(vec);
         }
-        else if (t == parquet::Type::DOUBLE) {
-            std::vector<double> data;
-            data.reserve(num_rows);
-            for (int rg = 0; rg < num_row_groups; rg++) {
-                auto reader_rg = reader->RowGroup(rg)->Column(col_index);
-                auto dbl_reader = static_cast<parquet::DoubleReader*>(reader_rg.get());
-                int16_t def_level;
-                double value;
-                while (dbl_reader->HasNext()) {
-                    int64_t values_read = 0;
-                    dbl_reader->ReadBatch(1, &def_level, nullptr, &value, &values_read);
-                    if (values_read > 0) data.push_back(value);
+
+        else if (physical_type == parquet::Type::DOUBLE)
+        {
+            std::vector<double> vec;
+
+            for (int rg = 0; rg < num_row_groups; rg++)
+            {
+                auto row_group = reader->RowGroup(rg);
+                auto column_reader = row_group->Column(col_index);
+
+                auto dbl_reader =
+                    static_cast<parquet::DoubleReader*>(column_reader.get());
+
+                while (dbl_reader->HasNext())
+                {
+                    double value;
+                    int16_t def, rep;
+                    int64_t read;
+
+                    dbl_reader->ReadBatch(1, &def, &rep, &value, &read);
+
+                    if (read > 0)
+                        vec.push_back(value);
                 }
             }
-            std::cout << "[INFO] First 5 double values: ";
-            for (size_t i = 0; i < std::min<size_t>(5, data.size()); i++) std::cout << data[i] << " ";
-            std::cout << std::endl;
-            table.double_cols.push_back(std::move(data));
+
+            table.double_cols.push_back(vec);
         }
-        else if (t == parquet::Type::BYTE_ARRAY) {
-            std::vector<std::string> data;
-            data.reserve(num_rows);
-            for (int rg = 0; rg < num_row_groups; rg++) {
-                auto reader_rg = reader->RowGroup(rg)->Column(col_index);
-                auto ba_reader = static_cast<parquet::ByteArrayReader*>(reader_rg.get());
-                int16_t def_level;
-                parquet::ByteArray value;
-                while (ba_reader->HasNext()) {
-                    int64_t values_read = 0;
-                    ba_reader->ReadBatch(1, &def_level, nullptr, &value, &values_read);
-                    if (values_read > 0) data.emplace_back(reinterpret_cast<const char*>(value.ptr), value.len);
+
+        else if (physical_type == parquet::Type::BYTE_ARRAY)
+        {
+            std::vector<std::string> vec;
+
+            for (int rg = 0; rg < num_row_groups; rg++)
+            {
+                auto row_group = reader->RowGroup(rg);
+                auto column_reader = row_group->Column(col_index);
+
+                auto str_reader =
+                    static_cast<parquet::ByteArrayReader*>(column_reader.get());
+
+                while (str_reader->HasNext())
+                {
+                    parquet::ByteArray value;
+                    int16_t def, rep;
+                    int64_t read;
+
+                    str_reader->ReadBatch(1, &def, &rep, &value, &read);
+
+                    if (read > 0)
+                    {
+                        vec.emplace_back(
+                            reinterpret_cast<const char*>(value.ptr),
+                            value.len);
+                    }
                 }
             }
-            std::cout << "[INFO] First 5 string values: ";
-            for (size_t i = 0; i < std::min<size_t>(5, data.size()); i++) std::cout << "\"" << data[i] << "\" ";
-            std::cout << std::endl;
-            table.string_cols.push_back(std::move(data));
-        }
-        else {
-            throw std::runtime_error("Unsupported column type");
+
+            table.string_cols.push_back(vec);
         }
     }
 
-    std::cout << "[INFO] Successfully read table with "
-              << table.num_rows << " rows and "
-              << table.num_cols << " columns." << std::endl;
+    // simple sanity: check that all columns read have the same number of rows
+    size_t expected = 0;
+    if (!table.int64_cols.empty()) expected = table.int64_cols[0].size();
+    else if (!table.int32_cols.empty()) expected = table.int32_cols[0].size();
+    else if (!table.double_cols.empty()) expected = table.double_cols[0].size();
+    else if (!table.string_cols.empty()) expected = table.string_cols[0].size();
+
+    auto check_vecs = [&](auto &vecs, const char *name) {
+        for (size_t i = 0; i < vecs.size(); ++i) {
+            if (vecs[i].size() != expected) {
+                std::cerr << "[WARN] Column " << name << "[" << i << "] has "
+                          << vecs[i].size() << " rows but expected " << expected << "\n";
+            }
+        }
+    };
+    check_vecs(table.int64_cols, "int64");
+    check_vecs(table.int32_cols, "int32");
+    check_vecs(table.double_cols, "double");
+    check_vecs(table.string_cols, "string");
 
     return table;
 }
