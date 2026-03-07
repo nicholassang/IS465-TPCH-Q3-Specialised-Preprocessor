@@ -6,15 +6,28 @@
 [INFO] Successfully read table with 600572 rows and 4 columns.
 [INFO] Selected 1543 valid customers out of 15000
 [INFO] Inserted 82596 orders into hash table out of 150000 total orders
-[INFO] Aggregated 330616 lineitems out of 600572
-[INFO] Collected 7597 results
-95808,2.21363e-316,9404,0
-79331,2.17056e-316,9710,0
-240837,2.16948e-316,9505,0
-53920,2.14851e-316,9226,0
-55234,2.12758e-316,8340,0
-144355,2.10709e-316,8723,0
-89924,2.09605e-316,9754,0
-6882,2.03739e-316,10039,0
-208450,2.02299e-316,8327,0
-257923,1.919e-316,9284,0
+[INFO] Aggregating lineitem table with 600572 rows and 4 columns
+[INFO] Column 0: l_orderkey, type=int64, num_chunks=1
+  Chunk 0 length=600572
+   First 5 values: 1 1 1 1 1 
+[INFO] Column 1: l_extendedprice, type=decimal128(15, 2), num_chunks=1
+  Chunk 0 length=600572
+   First 5 values: 24386.67 58958.28 10210.96 31197.88 31329.60 
+[INFO] Column 2: l_discount, type=decimal128(15, 2), num_chunks=1
+  Chunk 0 length=600572
+   First 5 values: 0.04 0.09 0.10 0.09 0.10 
+[INFO] Column 3: l_shipdate, type=date32[day], num_chunks=1
+  Chunk 0 length=600572
+   First 5 values: 9568 9598 9524 9607 9585 
+[INFO] Aggregated 178734 lineitems out of 600572
+[INFO] Collected 5965 results
+0,5.54393e+09,10288,0
+82149,435981,8477,0
+214981,357189,8309,0
+225,355026,9331,0
+6882,353406,10039,0
+240034,344726,8132,0
+254499,343970,9072,0
+262754,342203,8401,0
+38373,335267,9088,0
+180870,334841,8062,0
