@@ -1,13 +1,21 @@
 START
-[INFO] Opening Parquet file: ..\..\data\customer_q3.parquet
-[INFO] Num row groups: 1
+Opening Parquet file: ..\..\data\customer_q3.parquet
+Columns in ..\..\data\customer_q3.parquet:
+Column 0: c_custkey, type=INT64
+Column 1: c_mktsegment, type=BYTE_ARRAY
+Num row groups: 1
 [INFO] Reading column 0 type=2, expecting 15000 rows
 [INFO] First 5 int64 values: 1 2 3 4 5 
 [INFO] Reading column 1 type=6, expecting 15000 rows
 [INFO] First 5 string values: "BUILDING" "AUTOMOBILE" "AUTOMOBILE" "MACHINERY" "HOUSEHOLD" 
-[INFO] Successfully read table with 15000 rows and 2 columns.
-[INFO] Opening Parquet file: ..\..\data\orders_q3.parquet
-[INFO] Num row groups: 2
+Successfully read table with 15000 rows and 2 columns.
+Opening Parquet file: ..\..\data\orders_q3.parquet
+Columns in ..\..\data\orders_q3.parquet:
+Column 0: o_orderkey, type=INT64
+Column 1: o_custkey, type=INT64
+Column 2: o_orderdate, type=INT32
+Column 3: o_shippriority, type=INT32
+Num row groups: 2
 [INFO] Reading column 0 type=2, expecting 150000 rows
 [INFO] First 5 int64 values: 1 2 3 4 5 
 [INFO] Reading column 1 type=2, expecting 150000 rows
@@ -16,9 +24,14 @@ START
 [INFO] First 5 int32 values: 9497 9831 8687 9414 8976 
 [INFO] Reading column 3 type=1, expecting 150000 rows
 [INFO] First 5 int32 values: 0 0 0 0 0 
-[INFO] Successfully read table with 150000 rows and 4 columns.
-[INFO] Opening Parquet file: ..\..\data\lineitem_q3.parquet
-[INFO] Num row groups: 5
+Successfully read table with 150000 rows and 4 columns.
+Opening Parquet file: ..\..\data\lineitem_q3.parquet
+Columns in ..\..\data\lineitem_q3.parquet:
+Column 0: l_orderkey, type=INT64
+Column 1: l_extendedprice, type=INT64
+Column 2: l_discount, type=INT64
+Column 3: l_shipdate, type=INT32
+Num row groups: 5
 [INFO] Reading column 0 type=2, expecting 600572 rows
 [INFO] First 5 int64 values: 1 1 1 1 1 
 [INFO] Reading column 1 type=2, expecting 600572 rows
@@ -27,8 +40,9 @@ START
 [INFO] First 5 int64 values: 4 9 10 9 10 
 [INFO] Reading column 3 type=1, expecting 600572 rows
 [INFO] First 5 int32 values: 9568 9598 9524 9607 9585 
-[INFO] Successfully read table with 600572 rows and 4 columns.
-[DEBUG] Testing columns [DEBUG] First 10 lineitem orderkeys: 1 1 1 1 1 1 2 3 3 3 
+Successfully read table with 600572 rows and 4 columns.
+[DEBUG] Testing columns 
+[DEBUG] First 10 lineitem orderkeys: 1 1 1 1 1 1 2 3 3 3 
 [DEBUG] First 10 orders orderkeys: 1 2 3 4 5 6 7 32 33 34 
 [LOG] filter_customers: 3111 valid customers selected
 [LOG] Valid customers count: 3111
@@ -44,7 +58,6 @@ START
 [DEBUG] Insert orderkey=70 custkey=6434 orderdate=8752 shipprio=0
 [INFO] Inserted 15427 orders into hash table
 [LOG] Orders inserted into hash table: 15427 / 150000
-[DEBUG] Sample orders hash keys: 283424 137729 1282 105221 67939 108740 17927 165 342048 1703 
-RESULTS
+[DEBUG] Sample orders hash keys: 283424 137729 1282 105221 67939 108740 17927 165 342048 1703 RESULTS
 [INFO] Collected 0 results
 l_orderkey,revenue,o_orderdate,o_shippriority
