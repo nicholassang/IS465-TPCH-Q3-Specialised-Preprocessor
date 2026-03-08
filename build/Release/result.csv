@@ -1,41 +1,60 @@
 START
-Opening Parquet file: ..\..\data\customer_q3.parquet
-Columns in ..\..\data\customer_q3.parquet:
-Column 0: c_custkey, type=INT64
-Column 1: c_mktsegment, type=BYTE_ARRAY
-Successfully read table with 15000 rows and 2 columns.
+read_parquet: Opening Parquet file: ..\..\data\customer_q3.parquet
+read_parquet: Columns in ..\..\data\customer_q3.parquet:
+read_parquet: Column 0: c_custkey, type=INT64
+read_parquet: Column 1: c_mktsegment, type=BYTE_ARRAY
+read_parquet: Successfully read table with 15000 rows and 2 columns.
 ===============================
-Opening Parquet file: ..\..\data\orders_q3.parquet
-Columns in ..\..\data\orders_q3.parquet:
-Column 0: o_orderkey, type=INT64
-Column 1: o_custkey, type=INT64
-Column 2: o_orderdate, type=INT32
-Column 3: o_shippriority, type=INT32
-Successfully read table with 150000 rows and 4 columns.
+read_parquet: Opening Parquet file: ..\..\data\orders_q3.parquet
+read_parquet: Columns in ..\..\data\orders_q3.parquet:
+read_parquet: Column 0: o_orderkey, type=INT64
+read_parquet: Column 1: o_custkey, type=INT64
+read_parquet: Column 2: o_orderdate, type=INT32
+read_parquet: Column 3: o_shippriority, type=INT32
+read_parquet: Successfully read table with 150000 rows and 4 columns.
 ===============================
-Opening Parquet file: ..\..\data\lineitem_q3.parquet
-Columns in ..\..\data\lineitem_q3.parquet:
-Column 0: l_orderkey, type=INT64
-Column 1: l_extendedprice, type=INT64
-Column 2: l_discount, type=INT64
-Column 3: l_shipdate, type=INT32
-Successfully read table with 600572 rows and 4 columns.
+read_parquet: Opening Parquet file: ..\..\data\lineitem_q3.parquet
+read_parquet: Columns in ..\..\data\lineitem_q3.parquet:
+read_parquet: Column 0: l_orderkey, type=INT64
+read_parquet: Column 1: l_extendedprice, type=INT64
+read_parquet: Column 2: l_discount, type=INT64
+read_parquet: Column 3: l_shipdate, type=INT32
+read_parquet: Successfully read table with 600572 rows and 4 columns.
 ===============================
-[LOG] filter_customers: 3111 valid customers selected
+[LOG] filter_customers: filter_customers: 3111 valid customers selected
 ===============================
-[SKIP] orderkey=1 custkey=3691 orderdate=9497
-[SKIP] orderkey=2 custkey=7801 orderdate=9831
-[SKIP] orderkey=3 custkey=12332 orderdate=8687
-[SKIP] orderkey=4 custkey=13678 orderdate=9414
-[DEBUG] Insert orderkey=5 custkey=4450 orderdate=8976 shipprio=0
-[DEBUG] Insert orderkey=64 custkey=3212 orderdate=8962 shipprio=0
-[DEBUG] Insert orderkey=66 custkey=12920 orderdate=8785 shipprio=0
-[DEBUG] Insert orderkey=69 custkey=8449 orderdate=8920 shipprio=0
-[DEBUG] Insert orderkey=70 custkey=6434 orderdate=8752 shipprio=0
-[INFO] Inserted 15427 orders into hash table
+[SKIP] build_orders_hash: orderkey=1 custkey=3691 orderdate=9497
+[SKIP] build_orders_hash: orderkey=2 custkey=7801 orderdate=9831
+[SKIP] build_orders_hash: orderkey=3 custkey=12332 orderdate=8687
+[SKIP] build_orders_hash: orderkey=4 custkey=13678 orderdate=9414
+[DEBUG] build_orders_hash: Insert orderkey=5 custkey=4450 orderdate=8976 shipprio=0
+[DEBUG] build_orders_hash: Insert orderkey=64 custkey=3212 orderdate=8962 shipprio=0
+[DEBUG] build_orders_hash: Insert orderkey=66 custkey=12920 orderdate=8785 shipprio=0
+[DEBUG] build_orders_hash: Insert orderkey=69 custkey=8449 orderdate=8920 shipprio=0
+[DEBUG] build_orders_hash: Insert orderkey=70 custkey=6434 orderdate=8752 shipprio=0
+[INFO] build_orders_hash: Inserted 15427 orders into hash table
 ===============================
 [LOG] Orders inserted into hash table: 15427 / 150000
+print_lineitem_schema: [DEBUG] Lineitem Table Schema:
+print_lineitem_schema: [DEBUG] INT64 column: l_orderkey, rows=600572
+print_lineitem_schema: [DEBUG] INT64 column: l_extendedprice, rows=600572
+print_lineitem_schema: [DEBUG] INT64 column: l_discount, rows=600572
+print_lineitem_schema: [DEBUG] INT32 column: l_shipdate, rows=600572
+===============================
+aggregate_lineitem: [DEBUG] Starting aggregation for 600572 lineitems
+aggregate_lineitem: [INFO] Aggregation complete: 62006 aggregated, 538566 skipped.
+===============================
 ===============================
 RESULTS
-[INFO] Collected 0 results
+collect_results: [INFO] Collected 15427 results
 l_orderkey,revenue,o_orderdate,o_shippriority
+134626,1.40961e+07,8573,0
+251075,1.35512e+07,8893,0
+36258,1.2976e+07,9171,0
+476994,1.25412e+07,8862,0
+174725,1.12644e+07,8362,0
+412226,1.10688e+07,8435,0
+137220,1.03281e+07,8940,0
+454497,9.89345e+06,8634,0
+131302,8.99636e+06,8525,0
+152837,8.97695e+06,8886,0
